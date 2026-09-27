@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peringkat Kelas - Linear Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Peringkat Kelas</h1>
+      <p>Program mencari 3 nilai terbesar menggunakan Algoritma Linear Search</p>
+    </div>
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#penjelasan">Penjelasan</a>
+      <a href="#flowchart">Flowchart</a>
+    </nav>
+  </header>
+
+  <main id="beranda">
+    <section class="grid">
+      <div>
+        <section class="card">
+          <h2>👥 Input Data Siswa</h2>
+
+          <label for="nama">Nama Siswa</label>
+          <input id="nama" type="text" placeholder="Contoh: Budi">
+
+          <label for="nilai">Nilai</label>
+          <input id="nilai" type="number" min="0" max="100" placeholder="0 - 100">
+
+          <div class="buttons">
+            <button id="tambahBtn">＋ Tambah Data</button>
+            <button id="rankingBtn" class="green">⌕ Cari 3 Nilai Terbesar</button>
+          </div>
+          <p id="pesan" class="message"></p>
+        </section>
+
+        <section class="card">
+          <h2>👥 Daftar Data Siswa</h2>
+          <div id="dataSiswa">
+            <p class="muted">Belum ada data siswa.</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>🏆 Hasil Peringkat (Top 3)</h2>
+          <div id="hasilRanking">
+            <p class="muted">Masukkan minimal 3 siswa, lalu klik "Cari 3 Nilai Terbesar".</p>
+          </div>
+        </section>
+      </div>
+
+      <div>
+        <section class="card" id="penjelasan">
+          <h2>ⓘ Penjelasan Program</h2>
+          <p>
+            Program ini menggunakan <b>Algoritma Linear Search</b> untuk mencari
+            3 nilai terbesar dari data siswa, kemudian menampilkannya sebagai
+            peringkat 1, 2, dan 3.
+          </p>
+          <p>
+            Data siswa dimasukkan melalui form. Program memeriksa nilai satu per
+            satu dari array, menemukan nilai terbesar, menandai data tersebut,
+            lalu mengulangi proses sampai diperoleh tiga nilai terbesar.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>⚙️ Algoritma Linear Search</h2>
+          <p>
+            Linear Search adalah metode pencarian yang memeriksa data
+            <b>satu per satu dari awal sampai akhir</b> sampai data yang
+            dibutuhkan ditemukan.
+          </p>
+
+          <h3>Langkah-langkah</h3>
+          <ol>
+            <li>Periksa seluruh data siswa satu per satu.</li>
+            <li>Cari nilai terbesar pertama.</li>
+            <li>Simpan posisi siswa yang memiliki nilai terbesar.</li>
+            <li>Tandai data tersebut agar tidak dipilih kembali.</li>
+            <li>Ulangi pencarian untuk mendapatkan nilai terbesar kedua.</li>
+            <li>Ulangi kembali untuk mendapatkan nilai terbesar ketiga.</li>
+            <li>Tampilkan tiga siswa sebagai peringkat 1, 2, dan 3.</li>
+          </ol>
+        </section>
+
+        <section class="card example">
+          <h2>🧪 Contoh Proses</h2>
+          <p><b>Data nilai:</b> 80, 95, 70, 88, 100, 75, 92</p>
+          <ul>
+            <li>Linear Search pertama → <b>100</b></li>
+            <li>Linear Search kedua → <b>95</b></li>
+            <li>Linear Search ketiga → <b>92</b></li>
+          </ul>
+          <p><b>Hasil:</b> Peringkat 1 = 100, Peringkat 2 = 95, Peringkat 3 = 92.</p>
+        </section>
+
+        <section class="card" id="flowchart">
+          <h2>🔀 Flowchart Program</h2>
+          <p class="muted">Alur program dari input data sampai menampilkan 3 nilai terbesar.</p>
+          <img class="flowchart" src="flowchart.svg" alt="Flowchart algoritma Linear Search untuk mencari 3 nilai terbesar">
+        </section>
+
+        <section class="card">
+          <h2>💻 File yang Digunakan</h2>
+          <ul>
+            <li><b>index.html</b> — struktur dan isi halaman website.</li>
+            <li><b>style.css</b> — mengatur tampilan website.</li>
+            <li><b>script.js</b> — mengatur logika program dan algoritma Linear Search.</li>
+            <li><b>flowchart.svg</b> — gambar flowchart program.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tugas Algoritma dan Pemrograman — Linear Search</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
