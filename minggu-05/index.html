@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Pencarian Barcode Supermarket</title>
+    <!-- Menghubungkan File CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Simulasi Pencarian Barcode Supermarket</h1>
+        <p class="subtitle">Perbandingan Efisiensi Linear Search vs Binary Search</p>
+
+        <!-- Form Input Barcode -->
+        <div class="search-box">
+            <input type="number" id="inputBarcode" placeholder="Masukkan Nomor Barcode (contoh: 1888)..." />
+            <button id="btnCari">Cari Produk</button>
+        </div>
+
+        <!-- Ringkasan Hasil Efisiensi -->
+        <div id="summary" class="summary-box hidden">
+            <h2>Hasil Perbandingan Efisiensi</h2>
+            <div class="comparison-grid">
+                <div class="card">
+                    <h3>Linear Search</h3>
+                    <p class="steps" id="linearSteps">0 Langkah</p>
+                </div>
+                <div class="card">
+                    <h3>Binary Search</h3>
+                    <p class="steps" id="binarySteps">0 Langkah</p>
+                </div>
+            </div>
+            <p id="productResult" class="product-info"></p>
+        </div>
+
+        <!-- Log Detail Langkah-langkah Pencarian -->
+        <div class="log-grid">
+            <div class="log-column">
+                <h3>Langkah Linear Search</h3>
+                <div id="linearLog" class="log-box">Silakan masukkan barcode untuk memulai pencarian.</div>
+            </div>
+            <div class="log-column">
+                <h3>Langkah Binary Search</h3>
+                <div id="binaryLog" class="log-box">Silakan masukkan barcode untuk memulai pencarian.</div>
+            </div>
+        </div>
+
+        <!-- BAGIAN DEFINISI (Gaya Mahasiswa Semester 3) -->
+        <section class="definition-section">
+            <h2>Definisi Algoritma Pencarian</h2>
+            <div class="definition-grid">
+                <div class="definition-card">
+                    <h3>Linear Search (Pencarian Sekuensial)</h3>
+                    <p>
+                        Metode pencarian paling mendasar yang bekerja dengan mengecek setiap elemen di dalam array satu per satu dari indeks pertama (<code>0</code>) hingga indeks terakhir (<code>n-1</code>).
+                    </p>
+                    <ul>
+                        <li><strong>Analogi Maba:</strong> Seperti mencari file tugas di folder yang berantakan dengan mengecek isi file satu per satu.</li>
+                        <li><strong>Kelebihan:</strong> Praktis dan fleksibel, tidak membutuhkan syarat data harus terurut (bisa untuk <em>unsorted array</em>).</li>
+                        <li><strong>Kekurangan:</strong> Lambat untuk dataset berukuran besar karena kompleksitas waktunya <code>O(n)</code>.</li>
+                    </ul>
+                </div>
+
+                <div class="definition-card">
+                    <h3>Binary Search (Pencarian Biner)</h3>
+                    <p>
+                        Metode pencarian efisien berbasis pendekatan <em>Divide and Conquer</em>. Algoritma ini membagi area pencarian menjadi dua bagian secara berulang dengan membandingkan nilai target terhadap elemen tengah (<code>mid</code>).
+                    </p>
+                    <ul>
+                        <li><strong>Analogi Smt 3:</strong> Seperti mencari kata di kamus terjemahan, langsung buka halaman tengah lalu putuskan cari ke sebelah kiri atau kanan.</li>
+                        <li><strong>Kelebihan:</strong> Sangat cepat untuk data berukuran besar dengan kompleksitas waktu logaritmis <code>O(log n)</code>.</li>
+                        <li><strong>Kekurangan:</strong> Wajib memenuhi syarat utama, yaitu data <strong>harus sudah terurut</strong> (<em>sorted array</em>).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- BAGIAN TABEL PERBEDAAN -->
+        <section class="comparison-section">
+            <h2>Perbedaan Linear Search vs Binary Search</h2>
+            
+            <div class="table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Kategori Perbandingan</th>
+                            <th>Linear Search</th>
+                            <th>Binary Search</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Prinsip Kerja</td>
+                            <td>Memeriksa setiap elemen satu per satu secara berurutan dari awal sampai akhir.</td>
+                            <td>Membagi area pencarian menjadi dua bagian secara berulang berdasarkan nilai tengah.</td>
+                        </tr>
+                        <tr>
+                            <td>Syarat Data</td>
+                            <td>Data bisa berurutan maupun acak (tidak perlu diurutkan).</td>
+                            <td>Data <strong>wajib terurut</strong> (sorted) terlebih dahulu.</td>
+                        </tr>
+                        <tr>
+                            <td>Kompleksitas Waktu (Worst Case)</td>
+                            <td>O(n) - Jumlah langkah sebanding dengan jumlah data.</td>
+                            <td>O(log n) - Jumlah langkah bertambah jauh lebih lambat dibanding data.</td>
+                        </tr>
+                        <tr>
+                            <td>Kecepatan</td>
+                            <td>Lambat untuk data berukuran besar.</td>
+                            <td>Sangat cepat untuk data berukuran besar.</td>
+                        </tr>
+                        <tr>
+                            <td>Penggunaan Terbaik</td>
+                            <td>Data kecil atau data yang tidak terurut.</td>
+                            <td>Data jumlah besar yang sudah terurut.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Menghubungkan File JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
