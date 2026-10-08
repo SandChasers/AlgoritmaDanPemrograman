@@ -16,7 +16,7 @@ body {
   color: var(--white);
   background:
     linear-gradient(120deg, rgba(3,17,20,.95), rgba(0,32,35,.72), rgba(3,12,18,.92)),
-    url("./assets/miku.jpg");
+    url("./assets/Miku.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
