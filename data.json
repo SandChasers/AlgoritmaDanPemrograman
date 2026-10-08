@@ -1,0 +1,28 @@
+{
+  "student": {
+    "name": "Hizzam Alief Aditya",
+    "nim": "31250005"
+  },
+  "course": {
+    "name": "Algoritma dan Pemrograman",
+    "theme": "Hatsune Miku"
+  },
+  "tasks": [
+    {"week":"01","title":"Cek Bilangan Ganjil Genap","folder":"./minggu-01/"},
+    {"week":"02","title":"Minggu 02","folder":"./minggu-02/"},
+    {"week":"03","title":"Minggu 03","folder":"./minggu-03/"},
+    {"week":"04","title":"Linear Search","folder":"./minggu-04/"},
+    {"week":"05","title":"Perbedaan Linear dan Binary Search","folder":"./minggu-05/"},
+    {"week":"06","title":"Minggu 06","folder":"./minggu-06/"},
+    {"week":"07","title":"Minggu 07","folder":"./minggu-07/"},
+    {"week":"08","title":"Minggu 08","folder":"./minggu-08/"},
+    {"week":"09","title":"Minggu 09","folder":"./minggu-09/"},
+    {"week":"10","title":"Minggu 10","folder":"./minggu-10/"},
+    {"week":"11","title":"Minggu 11","folder":"./minggu-11/"},
+    {"week":"12","title":"Minggu 12","folder":"./minggu-12/"}
+  ],
+  "music": {
+    "youtubeId": "t5U0rrj0dio",
+    "title": "Hatsune Miku"
+  }
+}
