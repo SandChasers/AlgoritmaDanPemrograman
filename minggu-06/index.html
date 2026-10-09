@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengurutan Nilai Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">Algoritma dan Pemrograman</p>
+      <h1>Pengurutan Nilai Mahasiswa</h1>
+      <p class="subtitle">Menggunakan algoritma Bubble Sort</p>
+    </header>
+
+    <section class="panel">
+      <h2>Daftar Nilai</h2>
+      <p class="hint">Contoh data berisi 15 mahasiswa. Pilih urutan nilai, lalu tekan tombol urutkan.</p>
+
+      <div class="controls">
+        <label for="sortOrder">Urutkan nilai</label>
+        <select id="sortOrder">
+          <option value="asc">Ascending (terkecil ke terbesar)</option>
+          <option value="desc">Descending (terbesar ke terkecil)</option>
+        </select>
+        <button id="sortButton" type="button">Urutkan dengan Bubble Sort</button>
+        <button id="resetButton" class="secondary" type="button">Reset Data</button>
+      </div>
+
+      <p id="status" class="status" aria-live="polite">Data awal ditampilkan.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Nama Mahasiswa</th>
+              <th>Nilai Ujian</th>
+            </tr>
+          </thead>
+          <tbody id="studentTableBody"></tbody>
+        </table>
+      </div>
+    </section>
+    <section class="panel explanation">
+      <h2>Penjelasan Program</h2>
+      <p>
+        Program ini digunakan untuk mengurutkan nilai ujian mahasiswa dengan algoritma
+        <strong>Bubble Sort</strong>. Data mahasiswa disimpan dalam sebuah array yang
+        berisi nama dan nilai ujian.
+      </p>
+
+      <h3>Bagaimana Bubble Sort Bekerja?</h3>
+      <ol>
+        <li>Program membandingkan nilai dua mahasiswa yang posisinya bersebelahan.</li>
+        <li>Jika urutannya belum sesuai pilihan, kedua data ditukar.</li>
+        <li>Proses perbandingan dan pertukaran diulang sampai data terurut.</li>
+        <li>Data yang sudah terurut kemudian ditampilkan kembali pada tabel.</li>
+      </ol>
+
+      <h3>Pilihan Pengurutan</h3>
+      <ul>
+        <li><strong>Ascending:</strong> nilai diurutkan dari yang terkecil ke terbesar.</li>
+        <li><strong>Descending:</strong> nilai diurutkan dari yang terbesar ke terkecil.</li>
+      </ul>
+
+      <h3>Fungsi Tombol</h3>
+      <ul>
+        <li><strong>Urutkan dengan Bubble Sort:</strong> mengurutkan data berdasarkan pilihan.</li>
+        <li><strong>Reset Data:</strong> mengembalikan daftar ke urutan awal.</li>
+      </ul>
+
+      <p class="note">
+        <strong>Catatan:</strong> Nama dan nilai yang ditampilkan merupakan data contoh.
+        Data dapat diubah pada array <code>initialStudents</code> di file
+        <code>script.js</code>.
+      </p>
+    </section>
+
+    <footer>Contoh pembelajaran Bubble Sort.</footer>
+  </main>
+</body>
+</html>
